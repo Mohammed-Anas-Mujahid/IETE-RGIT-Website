@@ -1,0 +1,229 @@
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(90deg, #8198db, #e59fc7); /* Gradient applied to the entire body */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /* color: #333; Default text color */
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* min-height: 80vh; Full viewport height */
+  padding: 20px;
+}
+
+/* White Box */
+.hero-box {
+  background: white; /* Box background */
+  border-radius: 20px; /* Rounded corners */
+  box-shadow: 20px 20px 15px rgba(0, 0, 0, 0.2); /* Shadow on the right and bottom */
+  padding: 20px 30px;
+  max-width: 1100px;
+  width: 100%; /* Full width with constraints */
+  height: 250px;
+  margin-top: 150px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Center-align for responsive layout */
+}
+
+/* Logo Row */
+.logo-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* gap: 15px; */
+  flex-wrap: wrap; /* Wrap logos for responsive design */
+}
+
+.logo-img1 {
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 200px; /* Default size for logos */
+  height: auto;
+}
+.logo-img2 {
+  padding-left: 50px;
+  width: 40px; /* Default size for logos */
+  height: auto;
+}
+.logo-img3 {
+  width: 310px; /* Default size for logos */
+  height: auto;
+  padding-left: -100px;
+}
+
+.hero-text {
+  flex: 1; /* Take up remaining space */
+  text-align: center;
+}
+
+.welcome-text {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+  color: #1f1a44;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  margin: 25px 0 0;
+  color: #454545; /* Slightly muted color for subtitle */
+}
+
+/* Responsive Design */
+@media (max-width: 1050px) {
+  .hero-box {
+    flex-direction: column; /* Stack everything vertically */
+    height: auto;
+    margin-top: 130px;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .logo-row {
+    flex-direction: row;
+    justify-content: center; /* Center-align logos */
+  }
+
+  .hero-text {
+    text-align: center; /* Center-align text */
+  }
+
+  .welcome-text {
+    margin-top: 20px;
+    font-size: 1.9rem; /* Smaller font for headings */
+  }
+
+  .subtitle {
+    font-size: 1.15rem; /* Adjust subtitle size */
+  }
+
+  .logo-img1 {
+    width: 180px; /* Smaller logo size for small screens */
+    margin-left: 10px;
+  }
+  .logo-img3 {
+    width: 280px; /* Smaller logo size for small screens */
+  }
+}
+
+@media (max-width: 868px) {
+  .hero-box {
+    flex-direction: column; /* Stack everything vertically */
+    height: auto;
+    /* margin-top: 400px; */
+  }
+
+  .logo-row {
+    flex-direction: row;
+    justify-content: center; /* Center-align logos */
+  }
+
+  .hero-text {
+    text-align: center; /* Center-align text */
+  }
+
+  .welcome-text {
+    font-size: 1.9rem; /* Smaller font for headings */
+  }
+
+  .subtitle {
+    font-size: 1.15rem; /* Adjust subtitle size */
+  }
+
+  .logo-img1 {
+    width: 150px; /* Smaller logo size for small screens */
+    margin-left: 0%;
+  }
+  .logo-img3 {
+    width: 230px; /* Smaller logo size for small screens */
+  }
+}
+
+@media (max-width: 780px) {
+  .hero-box {
+    margin-left: 35px;
+    margin-right: 36px;
+  }
+
+  .logo-img1 {
+    width: 125px; /* Smaller logo size for small screens */
+    padding: 0%;
+  }
+  .logo-img2 {
+    width: 30px; /* Smaller logo size for small screens */
+    padding-left: 35px;
+
+  }
+  .logo-img3 {
+    width: 195px; /* Smaller logo size for small screens */
+    gap: 0px;
+    padding: 0;
+  }
+}
+
+@media (max-width: 580px) {
+  .logo-img1 {
+    width: 200px; /* Smaller logo size for small screens */
+    margin-top: 20px;
+    margin-bottom: 30px;
+    margin-left: 0%;
+  }
+  .logo-img2 {
+    width: 40px; /* Smaller logo size for small screens */
+    padding-left: 0px;
+
+  }
+  .logo-img3 {
+    width: 310px; /* Smaller logo size for small screens */
+  }
+
+  .hero-box {
+    flex-direction: column; /* Stack everything vertically */
+    height: auto;
+  }
+
+  .logo-row {
+    justify-content: center; /* Center-align logos */
+    flex-direction: column;
+  }
+
+  .welcome-text {
+    font-size: 1.6rem; /* Smaller font for headings */
+  }
+
+  .subtitle {
+    font-size: 1.2rem; /* Adjust subtitle size */
+  }
+}
+
+@media (max-width: 400px) {
+  .hero-box {
+    margin-left: 35px;
+    margin-right: 35px;
+  }
+
+  .logo-img1 {
+    width: 170px; /* Smaller logo size for small screens */
+    margin-top: 20px;
+    margin-bottom: 25px;
+  }
+  .logo-img2 {
+    width: 40px; /* Smaller logo size for small screens */
+    padding-left: 0px;
+
+  }
+  .logo-img3 {
+    width: 270px; /* Smaller logo size for small screens */
+  }
+}

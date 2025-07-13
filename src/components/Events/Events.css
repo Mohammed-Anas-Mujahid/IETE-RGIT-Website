@@ -1,0 +1,243 @@
+.events-section {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(90deg, #8198db, #e59fc7);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+}
+
+/* Event Title */
+.events-title {
+  font-size: 2.9rem;
+  font-weight: bold;
+  margin-top: 50px;
+}
+
+/* Description */
+.events-description {
+  font-size: 1.4rem;
+  max-width: 800px;
+  margin: 15px auto;
+}
+
+/* Image Box */
+.image-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 70%;
+  /* max-width: 700px; */
+  margin: 30px auto;
+  padding: 20px 0px;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 20px 20px 15px rgba(0, 0, 0, 0.15);
+  transition: all 0.9s ease-in-out;
+}
+
+/* Arrows */
+.arrow {
+  font-size: 2.2rem;
+  cursor: pointer;
+  color: #082c4e;
+  /* padding: 10px; */
+  margin: auto;
+  transition: transform 0.2s ease-in-out;
+}
+
+.arrow:hover {
+  color: #eda800;
+  transform: scale(1.1);
+}
+
+/* Image Container */
+.image-container {
+  position: relative;
+  width: 85%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.event-image {
+  width: 100%;
+  border-radius: 12px;
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+/* Hover Effect */
+.image-container:hover .image-hover-text {
+  opacity: 0;
+}
+
+.image-hover-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.648);
+  color: white;
+  /* padding: 20px; */
+  opacity: 1;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.image-hover-text h3 {
+  color: white;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.image-hover-text p {
+  color: white;
+  font-size: 1.4rem;
+  max-width: 80%;
+  line-height: 1.4;
+}
+
+/* View More Button */
+.view-more-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1.3rem;
+  border: none;
+  background: #082c4e;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.view-more-btn:hover {
+  background: #0164c0;
+}
+
+/* Expanded Content */
+.expanded-content {
+  margin-top: 60px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.expanded-content h3 {
+  font-size: 2.5rem;
+}
+
+.archive-link {
+  display: block;
+  color: white;
+  font-size: 1.7rem;
+  margin-top: 15px;
+  text-decoration: underline;
+}
+
+.archive-link:hover {
+  color: #eda800;
+}
+
+@media (max-width: 980px) {
+  .image-hover-text h3 {
+    font-size: 1.6rem;
+    /* margin: auto; */
+  }
+  .image-hover-text p {
+    font-size: 1.2rem;
+    /* margin: auto; */
+  }
+  .image-box {
+    width: 85%;
+    padding: 15px;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .events-title {
+    font-size: 2.5rem;
+  }
+  .events-description {
+    font-size: 1.2rem;
+    padding: 0 10px;
+  }
+  .image-box {
+    width: 90%;
+    padding: 15px;
+  }
+  .image-container {
+    width: 90%;
+  }
+  .arrow {
+    font-size: 1.8rem;
+  }
+  .image-hover-text h3 {
+    font-size: 1.4rem;
+    /* margin: auto; */
+  }
+  .image-hover-text p {
+    font-size: 1rem;
+    /* margin: auto; */
+  }
+  .view-more-btn {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 590px) {
+  .image-hover-text h3 {
+    font-size: 1.2rem;
+    /* margin: auto; */
+  }
+  .image-hover-text p {
+    font-size: 0.8rem;
+    /* margin: auto; */
+  }
+}
+
+@media (max-width: 480px) {
+  .events-title {
+    font-size: 2.2rem;
+  }
+  .events-description {
+    font-size: 1.1rem;
+    /* padding: 0 10px; */
+  }
+  .image-box {
+    width: 95%;
+    padding: 10px 2px;
+  }
+  .image-container {
+    width: 90%;
+  }
+  .arrow {
+    font-size: 1.3rem;
+  }
+  .expanded-content h3 {
+    font-size: 2rem;
+  }
+  .archive-link {
+    font-size: 1.6rem;
+  }
+  .image-hover-text h3 {
+    font-size: 1rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    /* margin: auto; */
+  }
+  .image-hover-text p {
+    font-size: 0.6rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    /* margin: auto; */
+  }
+}

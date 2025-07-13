@@ -1,0 +1,107 @@
+/* About Section Styles */
+.about-section {
+    padding: 50px 20px;
+    text-align: center;
+    background: linear-gradient(90deg, #8198db, #e59fc7); /* Gradient background */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* color: white; White text for title and description */
+  }
+  
+  /* About Header Styles */
+  .about-header {
+    margin-bottom: 40px;
+  }
+  
+  .about-title {
+    font-size: 2.9rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .about-description {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 0 auto; /* Center-align text */
+    color: #333;
+  }
+  
+  /* Vision and Mission Box Container */
+  .about-box-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap; /* Wrap boxes for smaller screens */
+    margin-top: 30px;
+  }
+  
+  /* Individual Box Styles */
+  .about-box {
+    background: white; /* White background for boxes */
+    color: #333; /* Dark text for content */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 20px 20px 15px rgba(0, 0, 0, 0.2); /* Shadow */
+    padding: 20px;
+    max-width: 350px;
+    width: 100%; /* Full width with constraints */
+    text-align: left; /* Left-align text inside boxes */
+  }
+  
+  .box-title {
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #082c4e; /* Slightly darker color for titles */
+  }
+  
+  .box-content {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: center;
+    color: rgb(41, 39, 39);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .about-box-container {
+      flex-direction: column; /* Stack boxes vertically */
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+    }
+  
+    .about-title {
+      font-size: 2.4rem;
+    }
+  
+    .about-description {
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .about-box {
+        width: 250px;
+    }
+    .about-title {
+      font-size: 2.2rem; /* Smaller title font */
+      margin-top: 40px;
+    }
+  
+    .about-description {
+      font-size: 1.1rem; /* Adjusted font size for small screens */
+    }
+  
+    .box-title {
+      font-size: 1.4rem;
+      text-align: center;
+    }
+  
+    .box-content {
+      font-size: 1rem;
+      text-align: center;
+    }
+  }
+  

@@ -1,0 +1,189 @@
+/* Navbar */
+body {
+  scroll-behavior: initial;
+  background: linear-gradient(90deg, #8198db, #e59fc7);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.teampage-header .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 15px 20px;
+  height: 50px;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+.back-button:hover .back-icon {
+  color: #eda800;
+}
+
+.back-button:hover span {
+  color: #eda800;
+  text-decoration: underline;
+  text-decoration-color: #eda800;
+}
+
+.back-icon {
+  font-size: 21px;
+  color: #0f172a;
+}
+
+.back-button span {
+  font-size: 25px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.back-button span:hover {
+  color: #eda800;
+  text-decoration: underline;
+  text-decoration-color: #eda800;
+}
+
+/* Core Team Section */
+.teampage-body {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.core-team-title,
+.junior-core-title {
+  font-size: 2.9rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
+
+/* Team Grid */
+.teampage-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 51px;
+  justify-items: center;
+}
+
+.team-card {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 20px 20px 15px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  max-width: 250px;
+}
+
+.team-card:hover {
+  transform: scale(1.04);
+  transition: 0.2s ease-in-out;
+}
+
+.team-photo-circle {
+  width: 210px;
+  height: 210px;
+  margin: 0 auto 15px;
+  border: 2px solid #735164;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  box-shadow: 15px 15px 17px rgba(0, 0, 0, 0.2);
+}
+
+.team-img {
+  width: 93%;
+  height: 93%;
+  object-fit: fill;
+  border-radius: 50%;
+}
+
+.team-name {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #003366;
+  margin: 10px 0;
+}
+
+.team-post {
+  font-size: 1.1rem;
+  color: #2a2929;
+}
+
+/* Junior Core Team */
+.junior-team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.junior-team-card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 20px 20px 15px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  padding: 15px;
+  width: 100%;
+  max-width: 200px;
+}
+
+.junior-team-card:hover {
+  transform: scale(1.05);
+  transition: 0.2s ease-in-out;
+}
+
+.junior-team-name {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #0f172a;
+}
+
+.junior-team-post {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .core-team-title, .junior-core-title {
+      font-size: 2.6rem;
+  }
+
+  .team-card, .junior-team-card {
+      padding: 15px;
+  }
+
+  .back-button span {
+      font-weight: bold;
+  }
+}
+
+@media (max-width: 480px) {
+  .core-team-title, .junior-core-title {
+      font-size: 2.2rem;
+  }
+
+  .team-card, .junior-team-card {
+      padding: 10px;
+  }
+
+  .back-button span {
+      font-weight: bold;
+  }
+}

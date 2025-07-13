@@ -1,0 +1,133 @@
+/* Team Section */
+.team-section {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  
+  padding: 35px 20px;
+  background: linear-gradient(90deg, #8198db, #e59fc7); /* Gradient background */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /* color: white; */
+}
+
+.team-title {
+  font-size: 2.8rem;
+  margin-bottom: 0px;
+  margin-top: 60px;
+  font-weight: bold;
+  color: white;
+}
+
+.team-subtitle {
+  padding-bottom: 30px;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+/* Team Grid */
+.team-grid1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 45px;
+}
+
+
+
+@media (max-width: 768px) {
+  .team-title {
+    font-size: 2.6rem;
+    font-weight: bold;
+    margin-top: 60px;
+  }
+
+  .team-subtitle {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-top: 60px;
+  }
+
+  .team-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .view-all-btn {
+    font-size: 1rem;
+  }
+}
+
+/* Team Card */
+.team-card1 {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 20px 20px 15px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  /* width: 90%; */
+  width: 270px;
+  padding: 15px;
+  padding-bottom: 10px;
+}
+
+.team-card1:hover {
+  transform: scale(1.04);
+  transition: 0.2s ease-in-out;
+}
+
+.team-photo-circle1 {
+  width: 220px;
+  height: 220px;
+  margin: 0 auto 15px;
+  /* background: linear-gradient(135deg, #d4a3e0, #6c9bcf); Circle gradient */
+  border: 2px solid #735164;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  box-shadow: 15px 15px 17px rgba(0, 0, 0, 0.2); /* Shadow for circle */
+}
+
+.team-img1 {
+  width: 93%;
+  height: 93%;
+  object-fit: fill;
+  border-radius: 50%;
+}
+
+.team-name1 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #003366;
+}
+
+.team-post1 {
+  font-size: 1.1rem;
+  color: #2a2929;
+  padding-bottom: 10px;
+}
+
+/* View All Button */
+.view-all-btn {
+  margin-top: 50px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: white;
+  background: #003366;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.15);
+}
+
+.view-all-btn:hover {
+  background: #0164c0;
+}

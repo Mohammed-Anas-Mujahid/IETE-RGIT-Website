@@ -1,0 +1,109 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  
+}
+
+.footer {
+  background: linear-gradient(90deg, #8198db, #e59fc7);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 20px 10px;
+  text-align: center;
+  margin-top: 40px;
+  /* box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1); */
+  border-top-left-radius: 20px; /* Rounded corners */
+  border-top-right-radius: 20px; /* Rounded corners */
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-links {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-link:hover {
+  color: #eda800;
+  /* transform: scale(1.1); */
+}
+
+.social-icon3 {
+  background: none;
+  color: #ffffff;
+  font-size: 1.9rem;
+  margin-right: 8px;
+}
+
+.social-text {
+  display: inline;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.createdby {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff; /* White for better contrast */
+  /* text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3); */
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.edit {
+  text-decoration: underline;
+  /* color: #082c4e; */
+  color: #082c4e; /* Golden color for a premium look */
+  transition: color 0.3s ease-in-out;
+}
+.edit:hover {
+  color: #eda800;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .social-text {
+    display: none; /* Hide text for medium and small devices */
+  }
+
+  .social-icon {
+    margin-right: 0;
+  }
+  .social-icon3 {
+    color: #ffffff;
+  }
+  .social-icon3:hover {
+    color: #eda800;
+  }
+
+  .social-links {
+    gap: 15px; /* Reduce spacing between icons */
+  }
+  .createdby {
+    font-size: 1.3rem;
+  }
+  .edit {
+    text-decoration: underline;
+    /* color: #082c4e; */
+  }
+}

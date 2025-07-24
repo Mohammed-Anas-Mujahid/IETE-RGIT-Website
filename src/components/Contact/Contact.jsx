@@ -36,10 +36,10 @@ const Contact = () => {
 
       emailjs
         .sendForm(
-          'service_fewi78f',
-          'template_v3mt8sf',
+          process.env.REACT_APP_EMAILJS_SERVICE_ID,
+          process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
           form.current,
-          'ioJRtI-c_kD5a6Ile'
+          process.env.REACT_APP_EMAILJS_PUBLIC_KEY
         )
         .then(
           (result) => {

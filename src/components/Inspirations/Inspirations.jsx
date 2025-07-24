@@ -10,7 +10,10 @@ const Inspirations = () => {
   return (
     <section id="inspiration" className="inspirations-section">
       {/* Title */}
-      <h1 className="inspirations-title">OUR INSPIRATION</h1>
+      <h1 className="inspirations-title">OUR INSPIRATIONS</h1>
+      <p className="inspirations-subtitle">
+        Guiding lights who shaped our journey
+      </p>
 
       {/* Inspirations Container */}
       <div className="inspirations-container">

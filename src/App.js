@@ -1,4 +1,6 @@
-import React from "react";
+import './index.css';
+import React, { useState, useEffect } from "react";
+import Preloader from "./components/Preloader/Preloader";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
@@ -13,6 +15,20 @@ import Inspirations from "./components/Inspirations/Inspirations";
 import "font-awesome/css/font-awesome.min.css";
 
 const App = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // simulate loading for 2.5 seconds
+    const timer = setTimeout(() => setLoading(false), 2500);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return <Preloader />;
+  }
+
+
+
   return (
     <Router>
       <div>

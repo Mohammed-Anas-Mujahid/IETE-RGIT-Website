@@ -6,10 +6,11 @@ import './Footer.css';
 function Footer() {
   return (
     <footer className="footer">
+      <p className='ways'>More ways to connect ✅</p>
       <div className="footer-content">
         <div className="social-links">
           <a
-            href="https://www.instagram.com/iete_rgit?igsh=MXB1N2oxOHN0NGcxNA=="
+            href="https://www.instagram.com/iete.rgit?igsh=MXBuOWw0Ynh3aWgxOA=="
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
@@ -40,7 +41,7 @@ function Footer() {
           </a>
         </div>
         <p className='createdby'>
-          Created by{' '}
+          Engineered by{' '}
           <a
             href="https://www.linkedin.com/in/mohammed-anas-mujahid-051b87353/"
             target="_blank"

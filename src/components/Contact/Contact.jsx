@@ -1,4 +1,5 @@
 import React from 'react';
+import Swal from 'sweetalert2';
 import { FaLocationArrow, FaPhoneAlt, FaInstagram, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import { SiGmail } from "react-icons/si";
 import { FaLocationDot } from "react-icons/fa6";
@@ -10,26 +11,62 @@ const Contact = () => {
   const form = useRef();
 
   const sendEmail = (e) => {
-    e.preventDefault();
-    emailjs
-      .sendForm(
-        'service_fewi78f', // Replace with EmailJS service ID
-        'template_v3mt8sf', // Replace with EmailJS template ID
-        form.current,
-        'ioJRtI-c_kD5a6Ile' // Replace with EmailJS user ID
-      )
-      .then(
-        (result) => {
-          alert('Message sent successfully!');
-          console.log(result.text);
-        },
-        (error) => {
-          alert('Failed to send message. Please try again.');
-          console.error(error.text);
+  e.preventDefault();
+
+  Swal.fire({
+    title: 'Are you sure?',
+    text: 'Do you want to send this message with the entered details?',
+    icon: 'question',
+    showCancelButton: true,
+    confirmButtonText: 'Yes, send it!',
+    cancelButtonText: 'Cancel',
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      // Show Sending loader
+      Swal.fire({
+        title: 'Sending...',
+        text: 'Please wait while we deliver your message.',
+        allowOutsideClick: false,
+        didOpen: () => {
+          Swal.showLoading();
         }
-      );
-    e.target.reset();
-  };
+      });
+
+      emailjs
+        .sendForm(
+          'service_fewi78f',
+          'template_v3mt8sf',
+          form.current,
+          'ioJRtI-c_kD5a6Ile'
+        )
+        .then(
+          (result) => {
+            Swal.fire({
+              icon: 'success',
+              title: 'Message Sent!',
+              text: 'Your message has been successfully delivered.',
+              confirmButtonColor: '#3085d6'
+            });
+            console.log(result.text);
+            e.target.reset(); // Reset form only if message is sent
+          },
+          (error) => {
+            Swal.fire({
+              icon: 'error',
+              title: 'Oops...',
+              text: 'Failed to send message. Please try again later.',
+              confirmButtonColor: '#dd3333'
+            });
+            console.error(error.text);
+          }
+        );
+    }
+    // No else block → No alert, no reset, do nothing on cancel
+  });
+};
+
 
   return (
     <section id='contact'>
@@ -110,7 +147,7 @@ const Contact = () => {
                 placeholder="Message"
                 required
               ></textarea>
-              <button type="submit">Send Message</button>
+              <button type="submit" >Send Message</button>
             </form>
           </div>
 

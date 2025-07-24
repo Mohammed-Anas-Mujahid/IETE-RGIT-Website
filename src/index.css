@@ -25,6 +25,10 @@ body {
   color: white; /* Ensure text is visible against the dark gradient */
 }
 
+ body::-webkit-scrollbar {
+  display: none;               /* Chrome, Safari, Opera */
+} 
+
 /* #e7c3d8 */
 /* #bac4e3 */
 /* #e5e7eb */

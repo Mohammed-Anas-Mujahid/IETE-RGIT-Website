@@ -1,4 +1,3 @@
-import React from 'react';
 import './Hero.css';
 
 import ieteOfficialLogo from '../../Assets/IETE Official Logo.png'; // Replace with your actual image path

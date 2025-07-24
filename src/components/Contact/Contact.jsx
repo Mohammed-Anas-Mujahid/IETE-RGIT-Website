@@ -1,6 +1,5 @@
-import React from 'react';
 import Swal from 'sweetalert2';
-import { FaLocationArrow, FaPhoneAlt, FaInstagram, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { FaPhoneAlt, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { SiGmail } from "react-icons/si";
 import { FaLocationDot } from "react-icons/fa6";
 import { useRef } from 'react';

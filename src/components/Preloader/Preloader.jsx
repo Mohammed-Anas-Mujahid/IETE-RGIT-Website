@@ -1,5 +1,4 @@
 // src/components/Preloader/Preloader.jsx
-import React from "react";
 import "./Preloader.css";
 import logo from "../../Assets/IETE_LOGO.png";
 

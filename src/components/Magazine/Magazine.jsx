@@ -1,4 +1,3 @@
-import React from 'react';
 import './Magazine.css';
 
 import magazine2024 from '../../Assets/Magazine/magazine2024.jpeg';

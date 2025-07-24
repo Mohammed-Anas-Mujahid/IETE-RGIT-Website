@@ -1,4 +1,3 @@
-import React from 'react';
 import './Team.css';
 import member1 from '../../Assets/Core members/prathamesh.jpeg'; // Replace with actual images
 import member2 from '../../Assets/Core members/parth.png';

@@ -1,5 +1,5 @@
 import './index.css';
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Preloader from "./components/Preloader/Preloader";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";

@@ -1,4 +1,3 @@
-import React from 'react';
 import './Inspirations.css';
 import professor1 from '../../Assets/principal.jpeg'; // Replace with actual image path
 import professor2 from '../../Assets/sanjay sir.jpeg'; // Replace with actual image path

@@ -1,5 +1,4 @@
-import React from 'react';
-import { FaInstagram, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import { RiInstagramFill } from "react-icons/ri";
 import './Footer.css';
 

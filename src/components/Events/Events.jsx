@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import "./Events.css";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
@@ -6,7 +6,6 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import image1 from "../../Assets/tech.jpeg";
 import image2 from "../../Assets/nontech.jpeg";
 import image3 from "../../Assets/IV.jpeg";
-import pdfFile from "../../Assets/EVENTS.pdf"; // Importing PDF
 
 const Events = () => {
   const images = [
@@ -24,7 +23,7 @@ const Events = () => {
     },
     {
       src: image3,
-      title: "Industrial Visits", 
+      title: "Industrial Visits",
       description:
         "Hands-on industry exposure is a crucial aspect of EXTC. IETE ISF RGIT organizes industrial visits (IVs) to leading technology and communication hubs, including: CETTM, Powai, BSNL Earth Station, CIII, Kharghar",
     },
@@ -33,67 +32,61 @@ const Events = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isExpanded, setIsExpanded] = useState(false);
 
-  // Handle Next Image
-  const nextImage = () => {
+  // ✅ Memoize functions to avoid stale closure in useEffect
+  const nextImage = useCallback(() => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
+  }, [images.length]);
 
-  // Handle Previous Image
   const prevImage = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
   };
 
-  // Auto-scroll effect every 5 seconds
+  // ✅ Auto-scroll effect every 10 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       nextImage();
-    }, 10000); // Change image every 5 seconds
+    }, 10000); // Change image every 10 seconds
 
     return () => clearInterval(interval); // Cleanup interval on component unmount
-  }, []);
+  }, [nextImage]);
 
   return (
     <section id="events" className="events-section">
-      {/* Title */}
       <h2 className="events-title">EVENTS</h2>
-      
-      {/* Description */}
+
       <p className="events-description">
         IETE ISF RGIT actively conducts a variety of technical and non-technical events throughout the academic year, fostering knowledge, skill development, and industry exposure for students.
       </p>
 
-      {/* Image Carousel */}
       <div className={`image-box ${isExpanded ? "expanded" : ""}`}>
-        {/* Left Arrow */}
         <FaChevronLeft className="arrow left-arrow" onClick={prevImage} />
 
-        {/* Image */}
         <div className="image-container">
           <img src={images[currentIndex].src} alt="Event" className="event-image" />
-          
-          {/* Hover Text */}
           <div className="image-hover-text">
             <h3>{images[currentIndex].title}</h3>
             <p>{images[currentIndex].description}</p>
           </div>
         </div>
 
-        {/* Right Arrow */}
         <FaChevronRight className="arrow right-arrow" onClick={nextImage} />
       </div>
 
-      {/* View More Button */}
       {!isExpanded && (
         <button className="view-more-btn" onClick={() => setIsExpanded(true)}>
           View More
         </button>
       )}
 
-      {/* Expanded Content */}
       {isExpanded && (
         <div className="expanded-content">
           <h3>Archives</h3>
-          <a href='https://drive.google.com/file/d/1xqlG4Mkb4VSX1pfdN-0Ll6cXI9KWY3ru/view?usp=sharing' target="_blank" rel="noopener noreferrer" className="archive-link">
+          <a
+            href="https://drive.google.com/file/d/1xqlG4Mkb4VSX1pfdN-0Ll6cXI9KWY3ru/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="archive-link"
+          >
             Events 2023-24
           </a>
         </div>
